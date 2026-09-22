@@ -3,37 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Todos Preview</title>
-  <style>
-    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 16px; }
-    h1 { font-size: 20px; }
-    ul { list-style: none; padding: 0; }
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
-    }
-    li.done .title { text-decoration: line-through; color: #999; }
-    .title { font-weight: bold; }
-    .meta { font-size: 13px; color: #777; white-space: nowrap; }
-    .badge {
-      font-size: 12px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      background: #eee;
-      color: #555;
-    }
-    li.done .badge { background: #d6f5d6; color: #2a7a2a; }
-    #status { color: #888; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>test_todos 목록</h1>
-  <p><a href="index.html">홈으로</a> | <a href="about.html">About</a></p>
-  <p id="status">불러오는 중...</p>
-  <ul id="todo-list"></ul>
+  <div class="page">
+    <nav class="top-nav">
+      <a href="index.html">홈</a>
+      <a href="about.html">About</a>
+      <a href="preview.html" class="active">Preview</a>
+    </nav>
+    <div class="card">
+      <h1>test_todos 목록</h1>
+      <p id="status">불러오는 중...</p>
+      <ul class="todo-list" id="todo-list"></ul>
+    </div>
+  </div>
 
   <script>
     const SUPABASE_URL = "https://bokfhaqclubksjwarrfo.supabase.co/rest/v1/";

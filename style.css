@@ -1,0 +1,126 @@
+:root {
+  --sky-50: #f0f9ff;
+  --sky-100: #e0f2fe;
+  --sky-200: #bae6fd;
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+  --ink: #0c4a6e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--sky-100) 0%, var(--sky-50) 320px, #ffffff 320px);
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+nav.top-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+nav.top-nav a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--sky-700);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--sky-200);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+nav.top-nav a:hover,
+nav.top-nav a.active {
+  background: var(--sky-500);
+  color: #ffffff;
+  border-color: var(--sky-500);
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--sky-200);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 30px -18px rgba(2, 132, 199, 0.4);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+  color: var(--sky-700);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* preview.html todo list */
+ul.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--sky-100);
+}
+
+ul.todo-list li:last-child {
+  border-bottom: none;
+}
+
+ul.todo-list li.done .title {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.title {
+  font-weight: 700;
+  color: var(--sky-700);
+}
+
+.meta {
+  font-size: 13px;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--sky-100);
+  color: var(--sky-600);
+  white-space: nowrap;
+}
+
+ul.todo-list li.done .badge {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+#status {
+  color: #64748b;
+}
